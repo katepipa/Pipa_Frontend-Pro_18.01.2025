@@ -1,0 +1,1 @@
+console.loq('Hello');
