@@ -65,3 +65,54 @@ console.log(`Max number in the array is ${maxNumber} under index ${arrOfNumbers.
 
 let newNullArrayAndMaxVal = arrOfNumbers.map(element => (element === maxNumber ? element : 0));
 console.log(`New array with max value and 0 values:\n ${newNullArrayAndMaxVal.join(' ')}`);
+
+// function
+let array = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+
+function findDifferentElementsInArray (array) {
+  let count = 0;
+  let countOfNegativeElements = 0;
+  let countOfOddPositiveElements = 0;
+  let countOfEvenPositiveElements = 0;
+
+  let sum = 0;
+  let sumOfEvenPositiveElements = 0;
+  let sumOfOddPositiveElements = 0;
+
+  let productOfPositiveElements = 1;
+
+  for (let value of array) {
+    if (value > 0) {
+      sum += value;
+      productOfPositiveElements *= value;
+      count++
+    }
+    if (value < 0) {
+      countOfNegativeElements++;
+    }
+    if (value > 0 && value % 2 !== 0) {
+      sumOfOddPositiveElements += value;
+      countOfOddPositiveElements++;
+    }
+    if (value > 0 && value % 2 === 0) {
+      sumOfEvenPositiveElements += value;
+      countOfEvenPositiveElements++;
+    }
+  }
+
+  let res = {
+    sum: sum,
+    count: count,
+    countOfNegativeElements: countOfNegativeElements,
+    countOfOddPositiveElements: countOfOddPositiveElements,
+    countOfEvenPositiveElements: countOfEvenPositiveElements,
+    sumOfEvenPositiveElements: sumOfEvenPositiveElements,
+    sumOfOddPositiveElements: sumOfOddPositiveElements,
+    productOfPositiveElements: productOfPositiveElements
+  };
+
+  return res;
+}
+
+const result = findDifferentElementsInArray(array);
+console.log(result);
