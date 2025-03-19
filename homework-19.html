@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 19</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./homework-19.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="container">
+        <form action="" method="get">
+          <label for="name">Enter your name</label>
+          <input type="text" name="name" id="name" onfocus="displayInformativeDiv()" onblur="removeInformativeDiv()" required>
+          <div class="app-buttons">
+            <a href="" class="button button-enter-link" onclick="getLink()">
+              <span>Enter link</span>
+            </a>
+            <a id="transition-via-link" href="" class="button" onclick="followLink()">
+              <span>Go to site</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
