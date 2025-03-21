@@ -10,18 +10,20 @@
   <body>
     <div class="app">
       <div class="container">
-        <form action="" method="get">
+        <form action="" method="post">
           <label for="name">Enter your name</label>
           <input type="text" name="name" id="name" onfocus="displayInformativeDiv()" onblur="removeInformativeDiv()" required>
           <div class="app-buttons">
-            <a href="" class="button button-enter-link" onclick="getLink()">
+            <a href="#" class="button button-enter-link" onclick="getLink(event)">
               <span>Enter link</span>
             </a>
-            <a id="transition-via-link" href="" class="button" onclick="followLink()">
+            <a id="transition-via-link" href="#" class="button" target="_blank" onclick="followLink(event)">
               <span>Go to site</span>
             </a>
           </div>
         </form>
+        <table></table>
+        <div class="image-container"></div>
       </div>
     </div>
   </body>
