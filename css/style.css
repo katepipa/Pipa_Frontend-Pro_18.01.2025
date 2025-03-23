@@ -1,0 +1,71 @@
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.image-slider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.image-slider-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-img-button {
+  height: 35px;
+  padding: 0 25px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background-color: #5DBB63;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+  line-height: 31px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.change-img-button:first-child {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.change-img-button:last-child {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.change-img-button:hover {
+  border-color: #5DBB63;
+  background-color: transparent;
+  color: #028A0F;
+}
+
+.change-img-button:focus {
+  border-color: #5DBB63;
+  background-color: #5DBB63;
+  color: #028A0F;
+}
