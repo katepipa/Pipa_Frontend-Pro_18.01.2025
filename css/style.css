@@ -1,0 +1,52 @@
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.choose-emoji-title {
+  text-align: center;
+}
+
+.vote-for-emoji {
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #FAD2E0;
+  border: 3px solid #F26B82;
+  border-radius: 25px;
+}
+
+.emoji-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emoji-button:hover img {
+  transform: scale(1.1);
+}
+
+.vote-counter {
+  font-weight: 500;
+}
