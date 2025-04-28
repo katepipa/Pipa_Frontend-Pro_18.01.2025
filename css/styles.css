@@ -1,0 +1,103 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.form-block {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.form-heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4f4f4f;
+}
+
+.label {
+  margin-right: 5px;
+}
+
+.select-city select {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.select-city {
+  margin-bottom: 20px;
+}
+
+.select-address textarea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 300px;
+  resize: vertical;
+}
+
+.language-ukrainian {
+  margin-top: 10px;
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+}
+
+.button-block input {
+  margin-right: 20px;
+  background-color: #e8dcca;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-block input:last-child {
+  margin-right: 0;
+}
+
+.button-block input:hover {
+  background-color: #e9caad;
+}
