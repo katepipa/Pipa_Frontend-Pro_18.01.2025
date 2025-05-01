@@ -2,6 +2,7 @@ const categoriesBlock = document.querySelector(".categories-nav");
 const productsBlock = document.querySelector("#products");
 const productInfoBlock = document.querySelector("#product-info");
 const buttonBuy = document.querySelector(".product-buy");
+const formBloc = document.querySelector(".form-bloc");
 
 const products = {
   laptops: [
@@ -150,10 +151,10 @@ productsBlock.addEventListener("click", function (event) {
   }
 });
 
+/// Show form ///
+
 buttonBuy.addEventListener("click", function () {
-  alert(`Product was purchased!`);
-  hideElement(productsBlock);
-  hideElement(productInfoBlock);
+  showElement(formBloc);
 });
 
 /// Common functions ///
