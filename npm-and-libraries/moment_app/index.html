@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 36</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">
+        <button class="btn">Get my Birthday date</button>
+        <textarea
+          name="birthday-date"
+          id="birthday-date"
+          cols="20"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="block">
+        <button id="user-birthday" class="btn">Change date format</button>
+        <textarea
+          name="user-birthday-date"
+          id="user-birthday-date"
+          placeholder="Enter your Birthday date"
+          cols="20"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="node_modules/moment/locale/uk.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

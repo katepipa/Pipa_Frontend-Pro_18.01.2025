@@ -1,0 +1,47 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 50px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+.btn {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s linear;
+  background: #4903fc;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #3c82f8;
+}
