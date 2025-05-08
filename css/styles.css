@@ -212,3 +212,70 @@ ul {
 .button-block input:hover {
   background-color: #e9caad;
 }
+
+.error-message {
+  display: block;
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+#order-summary {
+  background-color: #fffaf0;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+#order-summary h2 {
+  text-align: center;
+  color: #800020;
+  margin-bottom: 20px;
+}
+
+#order-summary p {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+#order-summary h3 {
+  color: #404040;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#order-summary ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#order-summary li {
+  margin-bottom: 8px;
+}
+
+.order-info {
+  display: block;
+  margin-top: 20px;
+}
+
+.order-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.order-info li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.label-decoration {
+  color: #404040;
+  font-weight: 700;
+}

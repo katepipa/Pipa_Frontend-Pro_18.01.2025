@@ -41,7 +41,7 @@
         <ul class="product-detailed-info"></ul>
         <button class="product-buy">Buy</button>
         <div class="form-bloc hidden">
-          <form action="/server-endpoint" method="get">
+          <form action="/server-endpoint" method="get" novalidate>
             <p class="form-heading">Complete your order:</p>
             <p>
               <label for="name" class="label">Name:</label>
@@ -52,6 +52,7 @@
                 maxlength="30"
                 required
               />
+              <span class="error-message" id="error-name"></span>
             </p>
             <p>
               <label for="surname" class="label">Surname:</label>
@@ -62,6 +63,7 @@
                 maxlength="30"
                 required
               />
+              <span class="error-message" id="error-surname"></span>
             </p>
             <p class="select-city">
               <label for="city">Choose your city:</label>
@@ -78,6 +80,7 @@
                 <option value="8">Uzhhorod</option>
                 <option value="9">Cherkasy</option>
               </select>
+              <span class="error-message" id="error-city"></span>
             </p>
             <p class="select-warehouse-Nova-Poshta">
               <label for="warehouse">Nova Poshta warehouse:</label>
@@ -88,6 +91,7 @@
                 rows="5"
                 required
               ></textarea>
+              <span class="error-message" id="error-warehouse"></span>
             </p>
             <p>
               <label
@@ -98,6 +102,7 @@
                 ><input type="radio" name="payment" value="card" /> Payment by
                 bank card</label
               >
+              <span class="error-message" id="error-payment"></span>
             </p>
             <p>
               <label for="quantity" class="label">Quantity:</label>
@@ -108,6 +113,7 @@
                 min="1"
                 value="1"
               />
+              <span class="error-message" id="error-quantity"></span>
             </p>
             <p class="select-order-commentary">
               <label for="commentary">Commentary for the order:</label>
@@ -116,7 +122,6 @@
                 name="commentary"
                 cols="15"
                 rows="5"
-                required
               ></textarea>
             </p>
             <div class="button-block">
@@ -125,6 +130,7 @@
           </form>
         </div>
       </section>
+      <div id="order-summary" class="hidden"></div>
     </div>
     <script src="./homework-25.js"></script>
   </body>
