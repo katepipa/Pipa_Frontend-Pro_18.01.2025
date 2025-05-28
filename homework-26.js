@@ -2,12 +2,19 @@ const categoriesBlock = document.querySelector(".categories");
 const categoriesNav = document.querySelector(".categories-nav");
 const productsBlock = document.querySelector("#products");
 const productInfoBlock = document.querySelector("#product-info");
+const usersOrdersBlock = document.querySelector(".user-orders");
+const orderSummaryBlock = document.querySelector("#order-summary");
+
 const buttonBuy = document.querySelector(".product-buy");
+const buttonUsersOrders = document.querySelector(".orders-button");
+const buttonCategories = document.querySelector(".categories-button");
 
 const form = document.querySelector("form");
 const formBloc = document.querySelector(".form-bloc");
 
 let selectedProduct = null;
+
+let listOfOrders = JSON.parse(localStorage.getItem("orders")) || [];
 
 const products = {
   laptops: [
@@ -159,6 +166,78 @@ productsBlock.addEventListener("click", function (event) {
   }
 });
 
+/// Show list of user's orders ///
+
+buttonUsersOrders.addEventListener("click", listOfUsersOrders);
+
+function listOfUsersOrders() {
+  hideElement(categoriesBlock);
+  hideElement(productsBlock);
+  hideElement(productInfoBlock);
+  hideElement(formBloc);
+  hideElement(buttonUsersOrders);
+
+  showElement(buttonCategories);
+  showElement(orderSummaryBlock);
+  displayAllOrders();
+}
+
+function displayAllOrders() {
+  orderSummaryBlock.innerHTML = `<h2>List of your orders:</h2><ul id="orders-list"></ul>`;
+
+  const ordersList = document.querySelector("#orders-list");
+  listOfOrders.forEach((order, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+    <div class="order-summary-header">
+      <div class="order-text">Order N${index + 1} - ${order.date} - ${
+      order.totalPrice
+    } EUR</div>
+      <button class="delete-order-button" data-index="${index}">Delete</button>
+    </div>
+    <div class="order-details hidden">
+      <p><strong>Name:</strong> ${order.details.name}</p>
+      <p><strong>Surname:</strong> ${order.details.surname}</p>
+      <p><strong>City:</strong> ${order.details.city}</p>
+      <p><strong>Product:</strong> ${order.product.name}</p>
+      <p><strong>Quantity:</strong> ${order.details.quantity}</p>
+      <p><strong>Price for one product:</strong> ${order.product.price} EUR</p>
+    </div>
+    `;
+    ordersList.appendChild(li);
+
+    const deleteButton = li.querySelector(".delete-order-button");
+    deleteButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+
+      const indexToDelete = parseInt(deleteButton.dataset.index);
+
+      listOfOrders.splice(indexToDelete, 1);
+      localStorage.setItem("orders", JSON.stringify(listOfOrders));
+      displayAllOrders();
+    });
+
+    const header = li.querySelector(".order-summary-header");
+    const details = li.querySelector(".order-details");
+
+    header.addEventListener("click", () => {
+      details.classList.toggle("hidden");
+    });
+  });
+}
+
+/// Go back to Categories ///
+
+buttonCategories.addEventListener("click", watchCategories);
+
+function watchCategories() {
+  hideElement(buttonCategories);
+  hideElement(orderSummaryBlock);
+
+  showElement(categoriesBlock);
+  showElement(buttonUsersOrders);
+}
+
 /// Show form ///
 
 buttonBuy.addEventListener("click", function () {
@@ -227,6 +306,15 @@ function formValidation(event) {
   hideElement(productsBlock);
   hideElement(productInfoBlock);
   displayOrderSummary(orderInfo);
+
+  listOfOrders.push({
+    date: new Date().toLocaleString(),
+    totalPrice: selectedProduct.price * orderInfo.quantity,
+    product: selectedProduct,
+    details: orderInfo,
+  });
+
+  localStorage.setItem("orders", JSON.stringify(listOfOrders));
 }
 
 /// Order Summary ///
