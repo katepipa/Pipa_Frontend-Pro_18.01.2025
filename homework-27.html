@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <table id="users-table">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>E-mail</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+      <div class="add-user-block">
+        <button id="add-user-button" class="btn">Add user</button>
+      </div>
+      <div class="user-data hidden"></div>
+      <div class="edit-user-data hidden">
+        <form id="edit-user-form" novalidate>
+          <p class="form-heading">Edit data:</p>
+          <p>
+            <label for="name" class="label">Name:</label>
+            <input type="text" id="name" name="name" maxlength="30" required />
+            <span class="error-message" id="error-name"></span>
+          </p>
+          <p>
+            <label for="surname" class="label">Surname:</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              maxlength="30"
+              required
+            />
+            <span class="error-message" id="error-surname"></span>
+          </p>
+          <p>
+            <label for="age" class="label">Age:</label>
+            <input type="number" id="age" name="age" required />
+            <span class="error-message" id="error-age"></span>
+          </p>
+          <p class="select-city">
+            <label for="city">Choose your city:</label>
+            <select id="city" name="city" required>
+              <option value="" selected disabled>---</option>
+              <option value="0">Kyiv</option>
+              <option value="1">Kharkiv</option>
+              <option value="2">Odesa</option>
+              <option value="3">Dnipro</option>
+              <option value="4">Zaporizhzhia</option>
+              <option value="5">Lviv</option>
+              <option value="6">Ivano-Frankivsk</option>
+              <option value="7">Vinnytsia</option>
+              <option value="8">Uzhhorod</option>
+              <option value="9">Cherkasy</option>
+            </select>
+            <span class="error-message" id="error-city"></span>
+          </p>
+          <p>
+            <label for="email" class="label">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              maxlength="30"
+              required
+            />
+            <span class="error-message" id="error-email"></span>
+          </p>
+          <p class="select-address">
+            <label for="address">Address:</label>
+            <textarea
+              id="address"
+              name="address"
+              cols="15"
+              rows="5"
+              required
+            ></textarea>
+            <span class="error-message" id="error-address"></span>
+          </p>
+          <div class="button-block">
+            <input type="submit" value="Save" class="btn" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./homework-27.js"></script>
+  </body>
+</html>
