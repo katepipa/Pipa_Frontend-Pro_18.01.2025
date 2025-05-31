@@ -1,0 +1,13 @@
+@import "bootstrap/dist/css/bootstrap.css";
+
+.listwrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  border: 1px solid blue;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
