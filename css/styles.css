@@ -25,3 +25,28 @@ body {
   padding-left: 15px;
   height: 100vh;
 }
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-height: 400px;
+  margin-bottom: 25px;
+}
+
+button {
+  max-width: 100px;
+  padding: 10px 15px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #155ac3;
+}
