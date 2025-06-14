@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment building</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="buildingForm" novalidate>
+        <h2>Appartment building info:</h2>
+        <label for="address">Building address:</label>
+        <input type="text" id="address" required /><br />
+        <label for="floors">Number of floors:</label>
+        <input type="number" id="floors" required /><br />
+        <label for="apartmentsNumber">Number of apartments:</label>
+        <input type="number" id="apartmentsNumber" required /><br />
+        <label for="residentsNumber">Residents per apartment:</label>
+        <input type="number" id="residentsNumber" required /><br />
+        <button type="submit">Next</button>
+      </form>
+      <div id="residentsFormContainer"></div>
+      <div id="output"></div>
+    </div>
+    <script src="./homework-30.js"></script>
+  </body>
+</html>
