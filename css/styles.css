@@ -1,0 +1,76 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.clock img {
+  width: 40px;
+  height: 60px;
+}
+
+.clock span {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.button-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-start {
+  margin-right: 20px;
+}
+
+button {
+  background-color: #111;
+  color: #f5c518;
+  border: 2px solid #f5c518;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #f5c518;
+  color: #111;
+  box-shadow: 0 0 10px #f5c518aa;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px #f5c518;
+}
