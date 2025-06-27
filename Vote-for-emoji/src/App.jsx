@@ -1,14 +1,7 @@
-import { Component } from "react";
-import ButtonClass from "./ButtonClass";
+import "./App.css";
 
-class App extends Component() {
-  render() {
-    return (
-      <>
-        <ButtonClass title="Button Class" />
-      </>
-    );
-  }
+function App() {
+  return <div>Vote for emoji</div>;
 }
 
 export default App;
