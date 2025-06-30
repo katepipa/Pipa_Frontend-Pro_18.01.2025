@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -21,6 +22,12 @@ app.post("/orders", (req, res) => {
   console.log(req.body);
   orders.push({ ...req.body, id: +new Date() });
   res.json(orders);
+});
+
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(port, () => {

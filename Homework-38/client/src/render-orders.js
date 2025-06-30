@@ -5,7 +5,7 @@ export function renderOrders() {
   ordersList.innerHTML = "";
 
   if (myOrders.length === 0) {
-    ordersList.innerHTML = `<p class="text-dark">You have no orders yet.</p>`;
+    ordersList.innerHTML = '<p class="text-dark">You have no orders yet.</p>';
     return;
   }
 

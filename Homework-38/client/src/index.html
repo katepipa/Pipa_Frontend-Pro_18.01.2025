@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <title>Online cafe</title>
   </head>
   <body>
@@ -50,10 +50,27 @@
                 <div class="col-md-6 text-center">
                   <img id="modal-image" src="" alt="" class="img-fluid mb-2" />
                   <h5 id="modal-title"></h5>
-                  <p>Base Price: <span id="modal-base-price"></span> EUR</p>
-                  <p>
-                    Final Price: <span id="modal-final-price">0.00</span> EUR
-                  </p>
+                  <div class="row mt-3 text-md-start">
+                    <!-- Calories Column -->
+                    <div class="col-6">
+                      <p>
+                        Base Calories:
+                        <span id="modal-base-calories"></span> kcal
+                      </p>
+                      <p>
+                        Final amount of calories:
+                        <span id="modal-final-calories">kcal</span> kcal
+                      </p>
+                    </div>
+                    <!-- Prices Column -->
+                    <div class="col-6">
+                      <p>Base Price: <span id="modal-base-price"></span> EUR</p>
+                      <p>
+                        Final Price:
+                        <span id="modal-final-price">0.00</span> EUR
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="col-md-6">
@@ -64,7 +81,7 @@
                       type="submit"
                       class="btn btn-success mt-3"
                     >
-                      Confirm
+                      Confirm order
                     </button>
                   </form>
                 </div>
@@ -79,6 +96,6 @@
         </div>
       </div>
     </div>
-    <script src="./dist/bundle.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
